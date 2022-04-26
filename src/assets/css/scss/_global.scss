@@ -8,3 +8,12 @@
 // h1, h2 {
 //     color: $white;
 // }
+
+a {
+    color: white;
+    display:block;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}

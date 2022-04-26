@@ -7,32 +7,39 @@ import HeroURL from '../assets/images/dan-pressly-react-developer-resume-hero.we
 
 
 const heroImage = css`
-    background-image: url('${HeroURL}');
-    background-position: center;
-    background-repeat: no-repeat;
+    background: url('${HeroURL}') no-repeat center;
     background-size: cover;
-    height: 35vh;
+    min-height: 340px;
     position: relative;
 `
 const heroText = css`
+    color: white;
     text-align: right;
     position: absolute;
     width: 100%
 `
-const h1Hero = css`
-    color: white;    
+const name = css`    
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: -0.1rem;
     line-height: 0;
-    margin: 5rem 4rem 0 0;
+    margin: 6rem 4rem 0 0;
     text-transform: uppercase;
 `
-const h2Hero = css`
-    color: white;    
+const occupation = css` 
     font-size: 1rem;
     font-weight: 400;
     margin: 1.1rem 4.6rem 0 0;
+`
+
+const contactContainer = css`
+    margin: 7.4rem 4.6rem 0 0;
+`
+
+const contactInfo = css `
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0 0 0 0;
 `
 
 
@@ -43,10 +50,13 @@ function Header() {
                 <div css={heroImage}>
                     <div css={heroText}>
                         <div>
-                            <h1 css={h1Hero}>Dan Pressly</h1>
-                            <h2 css={h2Hero}>React Web Developer</h2>
-                            <h2>Test 2</h2>
-                            <h2>Test 2</h2>
+                            <h1 css={name}>Dan Pressly</h1>
+                            <h2 css={occupation}>React Web Developer</h2>
+                        </div>
+                        <div css={contactContainer}>    
+                            <p css={contactInfo}>Asheville, NC</p>
+                            <a css={contactInfo} href="tel:+1 (330) 307-1794">330-307-1794</a>
+                            <a css={contactInfo} href="mailto:Pressly.Daniel@gmail.com">Pressly.Daniel@gmail.com</a>
                         </div>
                     </div>
                 </div>
