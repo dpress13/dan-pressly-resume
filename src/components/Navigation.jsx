@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { BrowserRouter, Switch, Route  } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,7 +13,20 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['Biography', 'Experience', 'Skills'];
+
+
+const pages = [
+  { name: 'Biography',
+    url: '/biography'
+  },
+  {
+    name: 'Experience', 
+    url: '/experience'
+  },
+  { name: 'Skills',
+    url: '/skills'
+  }
+];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const Navigation = () => {
@@ -77,8 +91,8 @@ const Navigation = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                <MenuItem key={page.name} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -86,21 +100,22 @@ const Navigation = () => {
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
-                key={page}
+                href={page.url}
+                key={page.name}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                {page}
+                {page.name}
               </Button>
             ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            {/* <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
               </IconButton>
-            </Tooltip>
+            </Tooltip> */}
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
@@ -129,4 +144,5 @@ const Navigation = () => {
     </AppBar>
   );
 };
+
 export default Navigation;

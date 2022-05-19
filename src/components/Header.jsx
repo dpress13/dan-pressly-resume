@@ -1,24 +1,22 @@
 /** @jsxImportSource @emotion/react */
-import React from 'react';
-import { jsx, css } from '@emotion/react';
-import { Container } from '@mui/material';
-import useScrollTrigger from '@mui/material/useScrollTrigger';
+import React from "react";
+import { jsx, css } from "@emotion/react";
+import { Container } from "@mui/material";
+import useScrollTrigger from "@mui/material/useScrollTrigger";
 
-import Hero from './Hero';
-import Navigation from './Navigation';
+import Hero from "./Hero";
+import Navigation from "./Navigation";
 
-
-function Header() {
-    return(
-        <header>
-           <Hero />
-           <Navigation />
-        </header>
-    );
-}
-
-
-
+const Header = () => {
+  return (
+    <header>
+      <Hero />
+      <nav>
+        <Navigation />
+      </nav>
+    </header>
+  );
+};
 
 // import Hero from '../assets/images/dan-pressly-react-developer-resume-hero.webp';
 // const HeroImage = {
@@ -29,7 +27,7 @@ function Header() {
 //     backgroundSize: 'cover',
 //     height: '35vh',
 //     position: 'relative'
-//     // width: '1200px' 
+//     // width: '1200px'
 // }
 
 // function Header() {

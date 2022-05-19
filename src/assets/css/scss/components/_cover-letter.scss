@@ -1,0 +1,19 @@
+@import "../global";
+@import "../variables";
+
+.section-title {
+    font-size: 1.33rem;
+    margin: 4rem auto 3rem;
+    text-align: center;
+}
+
+.address {
+    line-height: 0.5rem;
+}
+
+@media (min-width: 600px) {
+    .css-946xgt-MuiContainer-root {
+      padding-left: 32px !important;
+      padding-right: 32px !important;
+    }
+  }

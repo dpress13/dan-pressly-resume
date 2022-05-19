@@ -1,0 +1,52 @@
+// @import "../global";
+@import "../variables";
+
+
+a {
+  color: white;
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.hero-image {
+  background: $hero-image no-repeat center;
+  background-size: cover;
+  min-height: 340px;
+  position: relative;
+}
+
+.hero-text {
+  color: white;
+  text-align: right;
+  position: absolute;
+  right: 0;
+
+  &__name {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.1rem;
+    line-height: 0;
+    margin: 6rem 4rem 0 0;
+    text-transform: uppercase;
+  }
+
+  &__occupation {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 1.1rem 4.6rem 0 0;
+  }
+
+  &__contact-wrapper {
+    margin: 7.4rem 4.6rem 0 0;
+  }
+
+  &__contact-info {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+  }
+}
