@@ -1,8 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import React from "react";
-import { jsx, css } from "@emotion/react";
-import { Container } from "@mui/material";
-import useScrollTrigger from "@mui/material/useScrollTrigger";
+// import { jsx, css } from "@emotion/react";
+// import { Container } from "@mui/material";
+// import useScrollTrigger from "@mui/material/useScrollTrigger";
 
 import Hero from "./Hero";
 import Navigation from "./Navigation";

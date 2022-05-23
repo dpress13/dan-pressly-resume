@@ -1,5 +1,5 @@
-import Container from "@mui/material/Container";
-import BodyContainerStyling from "../UI/BodyContainerStyling";
+
+import SectionTitle from "./SectionTitle";
 
 import "../assets/css/scss/components/_cover-letter.scss";
 
@@ -10,15 +10,16 @@ const CoverLetter = () => {
     day: "numeric",
   });
 
+  // const sectionTitle = 'C/V';
   return (
-    <Container sx={BodyContainerStyling}>
-      <h3 className="section-title">C/V</h3>
-      <p>{todaysDate}</p>
-      <div className="address">
-        <p>Hiring Manager</p>
-        <p>Recreational Equipment, Inc.</p>
-        <p>1700 45th ST East, Suite 101</p>
-        <p>Sumner, WA 98352</p>
+    <div>
+      <SectionTitle name="C/V" />
+      <p className="cv__date">{todaysDate}</p>
+      <div className="cv__address-wrapper">
+        <p className="cv__address-item">Hiring Manager</p>
+        <p className="cv__address-item">Recreational Equipment, Inc.</p>
+        <p className="cv__address-item">1700 45th ST East, Suite 101</p>
+        <p className="cv__address-item">Sumner, WA 98352</p>
       </div>
       <p>Dear Hiring Manager - </p>
       <p>
@@ -53,17 +54,33 @@ const CoverLetter = () => {
           Volunteering through Patagonia‘s Action Works optimizing non-profit’s
           websites to support their activism efforts
         </li>
-        <li>Completing a 55 hour full-stack coding bootcamp with a focus on web application development</li>
+        <li>
+          Completing a 55 hour full-stack coding bootcamp with a focus on web
+          application development
+        </li>
         <li>Completing projects only to the highest standards</li>
-        <li>Continuing to self-educate on best practices and all things web development</li>
+        <li>
+          Continuing to self-educate on best practices and all things web
+          development
+        </li>
       </ul>
-      <p>I‘m excited to discover this web development opportunity at REI where I can continue to give my all to a company I feel does the same for me. I am confident this internship is a perfect fit as it encompasses the main driving forces in my life - my passion for the outdoors, development and effective leadership. Please feel free to reach out to further discuss my qualifications.</p>
-      <p>Thank you for your time, and I look forward to hearing from you soon. All the best,</p>
+      <p>
+        I‘m excited to discover this web development opportunity at REI where I
+        can continue to give my all to a company I feel does the same for me. I
+        am confident this internship is a perfect fit as it encompasses the main
+        driving forces in my life - my passion for the outdoors, development and
+        effective leadership. Please feel free to reach out to further discuss
+        my qualifications.
+      </p>
+      <p>
+        Thank you for your time, and I look forward to hearing from you soon.
+        All the best,
+      </p>
       <p>-Dan</p>
       <p></p>
       <p></p>
       <p></p>
-    </Container>
+    </div>
   );
 };
 

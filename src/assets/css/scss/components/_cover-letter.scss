@@ -3,12 +3,18 @@
 
 .section-title {
     font-size: 1.33rem;
-    margin: 4rem auto 3rem;
+    margin: 3rem auto 3rem;
     text-align: center;
 }
 
-.address {
-    line-height: 0.5rem;
+.cv__date, .cv__address-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+ .cv__address-item {
+    margin-bottom: 0;
+    margin-top: 0;
+    
 }
 
 @media (min-width: 600px) {

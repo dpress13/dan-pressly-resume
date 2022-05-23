@@ -1,4 +1,10 @@
 
+// Show Background Images when Printing
+* {
+  -webkit-print-color-adjust: exact;   /* Chrome, Safari, Edge */
+  color-adjust: exact;            /*Firefox*/
+}
+
 // Change Padding for MUI Container Globally
 @media (min-width: 600px) {
   .css-946xgt-MuiContainer-root {
@@ -6,6 +12,8 @@
     padding-right: 32px !important;
   }
 }
+
+p {}
 // body, html {
 //     height: 100%;
 //     margin: 0;

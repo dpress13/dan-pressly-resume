@@ -2,12 +2,14 @@ import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { Container } from "@mui/material";
-import { spacing } from '@mui/system';
+import BodyContainerStyling from "./UI/BodyContainerStyling";
+// import { spacing } from '@mui/system';
 // import Button from "@mui/material/Button";
 
 import theme from "./components/Theme";
 import Header from "./components/Header";
-import CoverLetter from "./components/CoverLetter";
+// import CoverLetter from "./components/CoverLetter";
+import Experience from "./components/Experience";
 // import "./assets/css/scss/Resume.scss";
 // import '../App.css';
 
@@ -15,12 +17,14 @@ const Resume = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="lg" disableGutters="true">
+      <Container maxWidth="lg" disableGutters={true}>
         <Header />
       </Container>
       <main>
-          <CoverLetter />
+        <Container sx={BodyContainerStyling}>
+          <Experience />
           {/* <Button variant="contained">Hello World</Button> */}
+        </Container>
       </main>
       <footer></footer>
     </ThemeProvider>
